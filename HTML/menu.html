@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - Menú Principal</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f8f9fa;
+  }
+
+  .container {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    background: rgb(231, 194, 220);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .btn-primary {
+    width: 100%;
+    display: block;
+  }
+
+.btn-wallet {
+    background-color: #8d59e2;
+    border: none;
+    color: rgb(243, 236, 240);
+    padding: 12px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-wallet:hover {
+    background-color: #723bc4;
+    color: rgb(236, 166, 213);
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Menú Principal</h2>
+        <div class="form-group">
+            <label for="balance">Dinero en cuenta:</label>
+            <h3><span id="monto">$0</span></h3>
+        </div>
+       <div id="mensaje-redireccion" class="text-center" style="height: 30px; color: #8d59e2; font-weight: bold; margin-bottom: 10px;">
+       </div>
+    <button class="btn btn-wallet mb-2" id="depositar">Depositar</button>
+    <button class="btn btn-wallet mb-2" id="enviarDinero">Enviar Dinero</button>
+    <button class="btn btn-wallet mb-2" id="ultimosMovimientos">Últimos Movimientos</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <script src="menu.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Wallet - Enviar Dinero</title>
+    <style>
+    body { 
+        height: 100vh; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        background-color: #f8f9fa; 
+        margin: 0;
+    }
+    .container { 
+        max-width: 450px; 
+        width: 100%; 
+        background: rgb(231, 194, 220);
+        padding: 30px; 
+        border-radius: 15px; 
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    }
+    h2 { color: #333; font-weight: bold; }
+
+    .btn-brand {
+        background-color: #8d59e2;
+        color: white;
+        border: none;
+        font-weight: bold;
+    }
+    .btn-brand:hover { background-color: #723bc4; color: white; }
+    .btn-action {
+        background-color: #b36d9b;
+        color: white;
+        border: none;
+        font-weight: bold;
+    }
+    .btn-action:hover { background-color: #55197c; color: white; }
+    .list-group-item {
+        border-left: 5px solid transparent;
+        transition: 0.3s;
+    }
+    .list-group-item:hover { 
+        background-color: #f8f4ff; 
+        border-left: 5px solid #8d59e2; 
+        cursor: pointer;
+    }
+    #nuevoContactoForm { 
+        display: none; 
+        background: #fdfdff; 
+        padding: 20px; 
+        border-radius: 10px; 
+        margin-bottom: 20px; 
+        border: 2px dashed #8d59e2;
+    }
+    .btn-outline-custom {
+        border: 2px solid #6c757d;
+        color: #6c757d;
+        background: transparent;
+        font-weight: bold;
+    }
+    .btn-outline-custom:hover { background: #6c757d; color: white; }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enviar Dinero</h2>
+        <div id="alert-container"></div>
+        <p class="text-center">Saldo: <strong id="displaySaldo">$0</strong></p>
+        <div class="form-group">
+            <label for="searchContact">Buscar en la agenda:</label>
+            <input type="text" class="form-control" id="searchContact" placeholder="Buscar contacto...">
+        </div>
+        <button id="btnAgregar" class="btn btn-brand btn-block mb-3">Agregar nuevo contacto</button>
+        <div id="nuevoContactoForm">
+    <h5>Nuevo Contacto</h5>
+    <div class="form-group">
+        <input type="text" id="inputNombre" class="form-control" placeholder="Nombre completo">
+        <div class="invalid-feedback">El nombre es obligatorio.</div>
+    </div>
+    <div class="form-group">
+        <input type="text" id="inputDetalle" class="form-control" placeholder="RUN (ej: 11.448.333-8)">
+        <div id="detalleFeedback" class="invalid-feedback">Formato de RUN inválido.</div>
+    </div>
+    <div class="form-group">
+        <input type="text" id="inputBanco" class="form-control" placeholder="Nombre del Banco (Ej: Banco de Chile)">
+        <div class="invalid-feedback">Debes ingresar el nombre del banco.</div>
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+        <button id="btnGuardar" class="btn btn-action btn-sm">Guardar Contacto</button>
+        <button id="btnCancelar" class="btn btn-secondary btn-sm">Cancelar</button>
+    </div>
+</div>
+        <h3>Contactos</h3>
+        <ul id="contactList" class="list-group mb-3">
+            <li class="list-group-item contacto-estatico" data-nombre="Elena Nito del Bosque" style="cursor: pointer;">
+                <div class="contact-info">
+                    <span class="contact-name">Elena Nito del Bosque.</span><br>
+                    <span class="contact-details">RUN: 15.655.977-3. Banco BCI</span>
+                </div>
+            </li>
+            <li class="list-group-item contacto-estatico" data-nombre="Susana Oria" style="cursor: pointer;">
+                <div class="contact-info">
+                    <span class="contact-name">Susana Oria.</span><br>
+                    <span class="contact-details">RUN: 18.342.546-8. Banco BCI</span>
+                </div>
+            </li>
+        </ul>
+        <button id="btnEnviarDinero" class="btn btn-action btn-block mb-3" style="display: none;"> Enviar dinero a contacto seleccionado></button>
+        <hr>
+        <a href="menu.html" class="btn btn-outline-custom btn-block">Volver al Menú Principal</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="enviardinero.js"></script>
+</body>
+</html>

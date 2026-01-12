@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - Depositar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+
+    body { 
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        background-color: #f8f9fa; 
+    }
+    .container { max-width: 400px; width: 100%; padding: 15px; }
+
+    .login-card { 
+        background: rgb(231, 194, 220);
+        padding: 30px; 
+        border-radius: 15px; 
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    }
+
+    .btn-deposit {
+        background-color: #9b4990;
+        border: none;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .btn-deposit:hover {
+        background-color: #d882e9;
+        color: white;
+    }
+
+    .btn-outline-custom {
+        border: 2px solid #8d59e2;
+        color: #8d59e2;
+        background: transparent;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .btn-outline-custom:hover {
+        background-color: #8d59e2;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+          <h2 class="text-center mb-4">Depositar</h2>
+            <div id="alert-container"></div>
+            <p class="text-muted text-center">Saldo actual: <strong id="saldoActual">$0</strong></p>
+            <form id="depositForm">
+              <div class="form-group">
+                 <label for="montoNuevo">Monto a Depositar:</label>
+                  <input type="number" class="form-control" id="montoNuevo" placeholder="Ej: 5000" required>
+                </div>
+               <button type="submit" class="btn btn-deposit btn-block">Confirmar Depósito</button>
+            </form>
+         <br>
+       <a href="menu.html" class="btn btn-outline-custom btn-block">Volver al Menú Principal</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="deposit.js"></script>
+</body>
+</html>

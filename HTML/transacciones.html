@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - Últimos Movimientos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+    body { 
+        height: 100vh; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        background-color: #f8f9fa; 
+        margin: 0;
+    }
+    .container { max-width: 450px; width: 100%; padding: 15px; }
+
+    .login-card { 
+        background: rgb(2231, 194, 220);
+        padding: 30px; 
+        border-radius: 15px; 
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    }
+    h2 { color: #333; font-weight: bold; }
+
+    #filtroTipo {
+        border: 2px solid #8d59e2;
+        border-radius: 8px;
+    }
+
+    .movimiento-item {
+        border-radius: 8px;
+        margin-bottom: 8px;
+        border: none;
+        background-color: #fdfdff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .monto-positivo { color: #2ecc71; font-weight: bold; }
+    .monto-negativo { color: #df3f2d; font-weight: bold; }
+
+    .btn-outline-custom {
+        border: 2px solid #8d59e2;
+        color: #8d59e2;
+        background: transparent;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .btn-outline-custom:hover {
+        background-color: #8d59e2;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <h2>Últimos Movimientos</h2>
+            <div class="form-group">
+                <label for="filtroTipo" class="font-weight-bold">Filtrar por tipo:</label>
+                <select id="filtroTipo" class="form-control">
+                    <option value="todos">Todos los movimientos</option>
+                    <option value="compra">Compras</option>
+                    <option value="deposito">Depósitos</option>
+                    <option value="transferencia">Transferencias enviadas</option>
+                </select>
+            </div>
+            <ul id="listaMovimientos" class="list-group">
+                </ul>
+            <br>
+            <a href="menu.html" class="btn btn-outline-custom btn-block">Volver al Menú Principal</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="transacciones.js"></script>
+</body>
+</html>
