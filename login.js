@@ -12,7 +12,7 @@
         if(email === 'admin@wallet.com' && pass === '123456') {
          window.location.href = 'HTML/menu.html';
         } else {
-        alert('Datos incorrectos (Versión jQuery)');
+        alert('Datos incorrectos');
          $('#password').val('');
         }
     });
